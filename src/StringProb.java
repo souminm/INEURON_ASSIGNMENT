@@ -58,7 +58,40 @@ public class StringProb {
         }
 
         //4.String is Pangram or not
-        char arr_ch[] = new char[26];
+        //eg- Waltz, bad nymph, for quick jigs vex.
+        System.out.println("Enter a String to check Pangram");
+        String pam = sc.nextLine();
+        String pam1 = pam.toLowerCase().replace(" ","");
+        int tp_arr[] = new int[26];
+        boolean flag = false;
+        for(int i =0;i<pam1.length();i++){
+            if(pam1.charAt(i)>='a' && pam1.charAt(i)<='z'){
+                tp_arr[(int)pam1.charAt(i) - 97]++;
+            }
+        }
+        /* traversing logic
+        for(int z =0;z<tp_arr.length;z++)
+        {
+            System.out.println((char)(z+97)+"-"+tp_arr[z]);
+        }*/
+        for(int z =0;z<tp_arr.length;z++){
+            if(tp_arr[z]==0)
+            {
+               flag = false;
+            }
+            else
+            {
+                flag = true;
+            }
+        }
+        if(flag)
+            System.out.println("Its a pangram string");
+        else
+            System.out.println("Not a pangram String");
+
+
+
+
 
 
 
