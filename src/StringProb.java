@@ -140,20 +140,5 @@ public class StringProb {
             }
         }
         System.out.println("Special characters count : present in the string is :"+count_spc);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
